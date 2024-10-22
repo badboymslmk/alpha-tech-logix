@@ -1,113 +1,326 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern HTML Email Template</title>
-<style type="text/css">
-	body {
-		margin: 0;
-		background-color: #cccccc;
-	}
-	table {
-		border-spacing: 0;
-	}
-	td {
-		padding: 0;
-	}
-	img {
-		border: 0;
-	}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            font-family: Arial, sans-serif;
+        }
+    
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+    
+        .header, .header1 {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .content {
+            background-color: #001070;
+            padding: 20px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            color: white;
+        }
+    
+        .services, .testimonials {
+            padding: 20px;
+            background-color: #ffffff;
+        }
+    
+        .service {
+            width: 33%;
+            text-align: center;
+            padding: 10px;
+        }
+    
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #001070;
+            color: white;
+            border-radius: 30px; /* Rounded corners for the footer */
+        }
+    
+        a {
+            color: #3fbce7;
+            text-decoration: none;
+        }
+    
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        h1, p {
+            margin: 0 0 15px;
+        }
+    
+        .content h1 {
+            text-align: center;
+            font-size: 28px;
+        }
+    
+        .content p.intro, .content p.final {
+            text-align: center;
+            font-size: 20px;
+        }
+    
+        .content p.intro11, .content p.body-text {
+            text-align: left;
+            font-size: 16px;
+        }
+    
+        /* Updated Services Section Styling */
+        .services h2, .testimonials h2 {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            color: #001070;
+        }
+    
+        .services h3 {
+            color: #001070;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    
+        .service img {
+            width: 80px;
+            height: 80px;
+        }
+    
+        .abc img {
+            width: 120%;
+            margin: 0; 
+        }
+    
+        .def {
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: #001070;
+            margin: 0;
+            padding: 10px;
+        }
+    
+        .testimonials {
+            text-align: center; /* Center-aligns the text */
+            padding: 70px; /* Adds padding around the section */
+        }
+    
+        .testimonials img {
+            display: block; /* Makes the image a block element */
+            margin: 20px auto; /* Centers the image and adds margin above and below */
+            width: 57px; /* Sets the width to 30px */
+            height: 40px; /* Sets the height to 30px */
+        }
+    
+        .testimonials p {
+            text-align: justify; /* Justifies the text */
+            padding: 0 20px; /* Adds left and right padding for space */
+            margin: 15px 0; /* Adds space between paragraphs */
+            font-size: 18px;
+        }
+    
+        .testimonials p1 {
+            margin-top: 30px; /* Adds extra space above the name paragraphs */
+            text-align: center; /* Justifies the text */
+            font-weight: bold;
+            font-size: 24px;
+        }
+    
+        /* Social Media Icons */
+        .fa {
+            padding: 8px;
+            font-size: 14px;
+            width: 30px; 
+            height: 30px; 
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%; 
+            display: inline-block; 
+            line-height: 30px; 
+        }
+    
+        .fa:hover {
+            opacity: 0.7; /* Slight transparency on hover */
+        }
+    
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+    
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+    
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+    
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+    
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+    
+        .fa-skype {
+            background: #00aff0;
+            color: white;
+        }
+    
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .service {
+                display: block;
+                width: 100%;
+            }
+            .services table {
+                width: 100%;
+            }
+            .header, .content, .services, .testimonials {
+                padding: 15px;
+            }
+        }
+    </style>    
 </head>
 <body>
 
+<table>
+    <tr>
+        <td class="header">
+            <img src="https://dl.dropbox.com/scl/fi/9z9hiqfxpuk3coippgvkm/1-removebg-preview.png?rlkey=394k2nai37a5jyeji0s31aotl&st=uwvcfsmv&dl=0" alt="Web Development">
+        </td>
+    </tr>
+    <tr>
+        <td class="content">
+            <h1>Let's Grow Together</h1>
+            <img src="https://dl.dropbox.com/scl/fi/hmilw71om7ini5vq2r8bn/7bc9bf1f976743a3c41aa43d88b4cfad697358.png?rlkey=nwl2zxqz97qnxcydilhuwjfzd&st=566hp4ko&dl=0" style="display: block; margin: 0 auto; width: 150px; height: 150px;">
+            <br>
+            <p class="intro">Hi, I'm Ahsan Ramzan, CEO of Alpha TechLogix.</p>
 
+            <p class="intro11">I hope you're doing well.</p>
 
-<!-- TOP BORDER -->
+            <p class="body-text">We’re a team of 40-50 professionals specializing in Web Development, Digital Marketing, SEO (Search Engine Optimization), Graphic Design & Logo Designing, Mobile Application Development, and Software Development. Our focus is on delivering high-quality, tailored solutions to meet the unique needs of businesses like yours.</p>
 
+            <p class="body-text">I believe there’s a great opportunity for us to collaborate, and I’m confident that our expertise can bring real value to your projects. We’re passionate about helping businesses succeed, and I’d love to explore how Alpha TechLogix can support and enhance your business objectives.</p>
 
-<!-- LOGO SECTION -->
+            <p class="body-text">If you’re open to it, I’d be happy to schedule a meeting at your convenience to discuss how we can work together. Let me know a time that works for you, and we can take it from there.</p>
 
-
-<!-- BANNER IMAGE -->
-
-
-<!-- THREE COLUMN SECTION -->
-
-
-<!-- TWO COLUMN SECTION -->
-
-
-<!-- TITLE, TEXT & BUTTON -->
-
-
-<!-- FOOTER SECTION -->
-
-
+            <p class="final">Looking forward to collaborating with you!</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="abc">
+            <img src="https://dl.dropbox.com/scl/fi/vn7rw025slsemhg2qik5i/architech-header-5.gif?rlkey=62b3xnmui0u7xkyio8lre46gg&st=hqdcktgm&dl=0" alt="Full-width Image">
+        </td>
+    </tr>
+    <tr>
+        <td class="services">
+            <h2>Services We Provide</h2>
+            <table>
+                <tr>
+                    <td class="service">
+                        <img src="https://dl.dropbox.com/scl/fi/2mixkl9cvl05hdiwyjbn1/architech-icon-1-1-2.png?rlkey=pv09jexuh0mombr60dfpdxqqu&st=ghmirmld&dl=0" alt="Web Development">
+                        <h3>Responsive Websites</h3>
+                        <p>We can Professionally Develop & Design Creative Responsive Websites that’ll be Strong-Framework Based!</p>
+                    </td>
+                    <td class="service">
+                        <img src="https://dl.dropbox.com/scl/fi/gefs8gypo1j6yi7fanyts/architech-icon-2-1.png?rlkey=x38wks79nem48j7qmoq90rl95&st=5w74ky6y&dl=0" alt="Graphic Design">
+                        <h3>Graphic & Logo Designing</h3>
+                        <p>Our Artistic & Imaginative Graphic Designers Create Eye-Catching Designs for every Inventive Need.</p>
+                    </td>
+                    <td class="service">
+                        <img src="https://dl.dropbox.com/scl/fi/hjimif0awysjhg21yogip/architech-icon-3-1.png?rlkey=l4lm13xiw2kxlfsshpeyrtdsz&st=pgjriipc&dl=0" alt="SEO">
+                        <h3>Mobile Applications</h3>
+                        <p>Powerful Framework Based, Both Android & IOS Mobile Applications for best Machine Experience.</p>
+                    </td>
+                </tr>
+				<tr>
+                    <td class="service">
+                        <img src="https://dl.dropbox.com/scl/fi/hdrwwai3ijyyl1edgdsvx/architech-icon-1-1.png?rlkey=d0urjdkgpjgjhoa72sdiltxfd&st=jzhgl3hf&dl=0" alt="SEO & Marketing Expertise">
+                        <h3>SEO & Marketing Expertise</h3>
+                        <p>Result Orientated SEO, Proficient Marketing Experts, That’ll Help You Gain Your Business Dreams!</p>
+                    </td>
+                    <td class="service">
+                        <img src="https://dl.dropbox.com/scl/fi/dvqqtqttxibxli8np7ixq/architech-icon-2.png?rlkey=2kycvoa2rfml13oxtjttkcz1i&st=s1526mva&dl=0" alt="Software Systems">
+                        <h3>Software Systems</h3>
+                        <p>Our Finest Software Missionaries can grip every error & develop simple to compound Software Systems!</p>
+                    </td>
+                    <td class="service">
+                        <img src="https://dl.dropbox.com/scl/fi/dy62edcvexwzs8zwvj5x3/architech-icon-3.png?rlkey=d3rlbcwzwolcs0mbsbelkmg0m&st=6fr3nud2&dl=0" alt="Digital Marketing">
+                        <h3>Digital Marketing</h3>
+                        <p>Our experts use professional digital marketing strategies to enhance your brand’s online presence.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="def" colspan="3">
+                        <p>Let's collaborate to bring your digital vision to life!</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="testimonials">
+            <h2>Testimonials</h2>
+            <img src="https://dl.dropbox.com/scl/fi/ntnvvg4cfzsp31ouaub9y/887db46017d6ebf3223ccac21c1e54fd931408.png?rlkey=ranpzublhugcrsa6u4v04ggr6&st=d6esxeaa&dl=0" alt="Web Development">
+            <p>Ahsan Ramzan exceeded our expectations in every way. From concept to completion, he demonstrated professionalism and creativity. What stood out the most was his ability to turn our ideas into a functional and beautiful website. He met every deadline and made the whole process smooth and stress-free. Truly an exceptional experience!</p>
+            <p1>Amy Lloyd</p1> <!-- Added a line break for space -->
+            <br>
+            <img src="https://dl.dropbox.com/scl/fi/ntnvvg4cfzsp31ouaub9y/887db46017d6ebf3223ccac21c1e54fd931408.png?rlkey=ranpzublhugcrsa6u4v04ggr6&st=d6esxeaa&dl=0" alt="Web Development">
+            <p>Ahsan Ramzan did an outstanding job on our website. It looks amazing and works perfectly. He delivered on time, and the whole process was smooth. I’m really happy with the final result and would definitely recommend him to anyone!</p>
+            <br>
+            <p1>Randay Hatcher</p1> <!-- Added a line break for space -->
+            <br>
+            <img src="https://dl.dropbox.com/scl/fi/ntnvvg4cfzsp31ouaub9y/887db46017d6ebf3223ccac21c1e54fd931408.png?rlkey=ranpzublhugcrsa6u4v04ggr6&st=d6esxeaa&dl=0" alt="Web Development">
+            <p>Working with Ahsan Ramzan was a pleasure. He understood exactly what we wanted and created a website that’s both stylish and easy to use. The project was completed ahead of schedule, and we couldn’t be more satisfied!</p>
+            <br>
+            <p1>Kerri Mckenna</p1> <!-- Added a line break for space -->
+        </td>
+    </tr>    
+    <tr>
+        <td class="header1">
+            <img src="https://dl.dropbox.com/scl/fi/9z9hiqfxpuk3coippgvkm/1-removebg-preview.png?rlkey=394k2nai37a5jyeji0s31aotl&st=uwvcfsmv&dl=0" alt="Web Development">
+        </td>
+    </tr>
+    <tr>
+        <td class="footer">
+            <!-- Add social media buttons -->
+            <h3>Connect with Us</h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-skype"></a>
+            <br>
+            <br>
+            <p>Alpha TechLogix | <a href="mailto:ahsan@alphatechlogix.com">ahsan@alphatechlogix.com</a> | Tel:<a href="tel:tel:6786665226"></a> (678)666-5226</p>
+        </td>
+    </tr>
+</table>
 
 </body>
 </html>
-
-<div style="position:absolute;bottom: 0;width: 100%;text-align: center;line-height: 40px;font-size: 25px;">
-	<a href="https://responsivehtmlemail.com/html-email-course/" target="_blank" style="color: #404577;text-decoration: none;">www.ResponsiveHTMLEmail.com</a>
-</div>
-
-
-
-
-
-<!-- Begin Social Share **you can remove this to center the template :) -->
-<style>
-	.btn:hover {
-		color: white;
-		opacity: .8;
-		transform: scale(1.02);
-	}
-</style>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-sm btn-danger" style="position: absolute; right: 7px; bottom: 7px;transition: transform .3s ease;" data-toggle="modal" data-target="#socialModal">
-  Subscribe!
-</button>
-<!-- Modal -->
-<div class="modal fade" id="socialModal" style="font-family: 'Poppins', sans-serif;">
-  <div class="modal-dialog modal-md" role="document">
-    <div class="modal-content" style="background-color: rgba(255, 255, 255, .9)!important;border: 0;">
-      <div class="modal-header" style="display: none;">
-        <button type="button" class="close" data-dismiss="modal">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-			<div class="modal-body">
-				<div class="container-fluid text-center">
-					<div class="row justify-content-center px-0">
-						<div class="col-12">
-							<h2 class="pt-2 pb-4">Subscribe & turn on notifications! <i class="fas fa-bell"></i></h2>
-						</div>
-						<div class="col-lg-5 my-2">
-							<!-- YOUTUBE CHANNEL -->
-							<a class="btn btn-lg" href="https://www.youtube.com/channel/UCZWoe3ezD_dZTZgQnDyBgFQ/?sub_confirmation=1" target="_blank" style="background-color: red;color: white;transition: transform .3s ease;"><i class="fab fa-youtube"></i> Subscribe
-							</a>
-						</div>
-						<div class="col-12">
-							<h6 class="pt-4 pb-0"><a href="https://responsivehtmlemail.com/html-email-course/" target="_blank">www.responsivehtmlemail.com</a></h6>
-						</div>
-					</div>
-				</div>
-			</div>
-    </div>
-  </div>
-</div>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script>
-	$(this).delay(2000).queue(function() { /*-- CHANGE DELAY TIME --*/
-		$("#socialModal").modal('show');
-	});
-</script>
